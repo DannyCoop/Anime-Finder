@@ -1,25 +1,27 @@
 import React from 'react'
 
-function Anime(){
+function Anime(props){
+
+    let info = (props.anime)
     return(
 
         // <div>Hello it's me</div>
         <div className='card'>
             <div className='content'>
                 <a className='header'>
-                    Name
+                    {info.title}
                 </a>
 
                 <div className="image">
-                    <img src='placeholder.com'/>
+                    <img src={info.image_url}/>
                 </div>
 
                 <div className='episodes'>
-                    episodes
+                    Episodes: {info.episodes}
                 </div>
 
                 <div className='description'>
-                    description
+                    {info.synopsis}
                 </div>
             </div>
         </div>

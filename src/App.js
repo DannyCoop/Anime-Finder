@@ -29,11 +29,28 @@ class App extends Component {
   }
 
   changeFilter = (type) => {
-    this.setState({
-      filters: {
-        type: type
-      }
+    let resultArray = []
+    let Array = this.state.animes.map( anime => {
+      let newArray = anime.genres.map(genre => {
+        if (type === genre.name.toLowerCase()){
+          resultArray.push(anime)
+          this.setState({
+            animes: resultArray,
+            filter: {
+              type: type
+            }
+          })
+        }
+      })
     })
+
+    console.log(this.state.animes)
+
+    // this.setState({
+    //   filters: {
+    //     type: type
+    //   }
+    // })
   }
 
 render(){
@@ -41,7 +58,7 @@ render(){
       <div className="ui container">
         <header>
           <h1 className="ui dividing header">
-            Anime Finder!!
+            Anime Finder
           </h1>
         </header>
         
@@ -52,8 +69,6 @@ render(){
             </div>
 
             <div className="column">
-              List of anime
-            
               <AnimeBoard animes={this.state.animes}/>
             </div>
           </div>

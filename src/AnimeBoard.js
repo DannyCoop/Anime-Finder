@@ -3,13 +3,14 @@ import Anime from './Anime'
 
 
 function AnimeBoard(props){
+    console.log(props)
 
     return(
         <div className='ui cards'>
 
             {props.animes.map(anime => {
                 return (<div>
-                    {<Anime/>}
+                    {<Anime anime={anime}/>}
                 </div>)
             })}
 
