@@ -44,13 +44,6 @@ class App extends Component {
       })
     })
 
-    console.log(this.state.animes)
-
-    // this.setState({
-    //   filters: {
-    //     type: type
-    //   }
-    // })
   }
 
 render(){
@@ -68,7 +61,7 @@ render(){
               <Filter changeFilter={this.changeFilter}/>
             </div>
 
-            <div className="column">
+            <div className="bottom column">
               <AnimeBoard animes={this.state.animes}/>
             </div>
           </div>

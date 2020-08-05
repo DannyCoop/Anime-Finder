@@ -9,11 +9,11 @@ function Anime(props){
         <div className='card'>
             <div className='content'>
                 <a className='header'>
-                    {info.title}
+                    <span>{info.title}</span>
                 </a>
 
                 <div className="image">
-                    <img src={info.image_url}/>
+                    <img className='image src' src={info.image_url}/>
                 </div>
 
                 <div className='episodes'>

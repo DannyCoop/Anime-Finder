@@ -1,38 +1,109 @@
-.App {
+.ui.dividing.header {
+  text-align:center;
+  text-shadow: 2px 2px 5px red;
+  font-size: 60px;
+}
+
+span {
+  font-size: 20px;
+  text-shadow: 2px 2px 5px red;
+  padding: 20px;
+}
+
+.bottom.column {  
+ 
+     width: 100%;
+     margin: auto;
+     padding: 20px;
+
+     
+}
+
+.ui.cards {
+  /* display: flex;
+
+  border: 3px solid #ff0;
+  padding: 20px; */
+/*   
+  position: relative;
+  margin:auto;
+  width: 100%;
+  height: auto; 
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around; */
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: space-evenly;
+
+
+  color: black;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.card {
+
+  border: 2px solid black;
+
+  box-shadow: 2px 2px 5px red;
+
+  /* width: 100%; */
+  /* height: 50%; */
+  margin: 10px;
+  box-sizing: border-box; 
+
+  /* width: 100%; */
+  /* float: right; */
+  /* max-height: 100%; */
+  overflow-y: auto;
+
+
+  list-style: none;
+  /* flex: 0 0 33.333333%; */
+  position: relative;
+  overflow: auto; 
+
+  float: left;
+  width:  300px; 
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5%;
+  padding: 25px;
+
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+
+  
+
+}
+
+.card:hover {
+  box-shadow: 2px 2px 100px white;
+}
+
+.image.src {
+  height: 20%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  text-shadow: 2px 2px 5px white;
+  
+}
+
+
+
+.field {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
