@@ -3,18 +3,10 @@ import './App.css';
 import Filter from './Filter';
 import AnimeBoard from './AnimeBoard'
 
+
 const URL = 'https://api.jikan.moe/v3/genre/anime/1'
 
 class App extends Component {
-  fetchAnimes(){
-    fetch(URL)
-    .then(res => res.json())
-    .then(animes => {
-      this.setState({
-        animes: animes
-      })
-    });
-  }
   constructor(){
     super()
     this.state={
@@ -25,6 +17,17 @@ class App extends Component {
     }
   }
 
+  componentDidMount(){
+    fetch(URL)
+    .then(res => res.json())
+    .then(animes => {
+  
+      this.setState({ 
+        animes: animes.anime
+      })
+    })
+  }
+
   changeFilter = (type) => {
     this.setState({
       filters: {
@@ -33,19 +36,7 @@ class App extends Component {
     })
   }
 
-
-  componentDidMount(){
-    const that=this
-    fetch(URL)
-    .then(res => res.json())
-    .then(animes => {
-      that.setState({ 
-        animes: animes
-      })
-    })
-  }
 render(){
-  console.log("this is:",this.state.animes.anime)
     return (
       <div className="ui container">
         <header>
@@ -62,6 +53,7 @@ render(){
 
             <div className="column">
               List of anime
+            
               <AnimeBoard animes={this.state.animes}/>
             </div>
           </div>
